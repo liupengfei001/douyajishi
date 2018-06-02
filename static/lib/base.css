@@ -1,0 +1,810 @@
+@charset "utf-8";
+
+/* ================================ */
+/* 格式化样式标签、基础类型样式       */
+html {
+  -ms-touch-action: none;
+}
+body {
+  font-family: Heiti, Heiti SC, DroidSans, DroidSansFallback, Arial, "Microsoft YaHei";
+  background-color: #fff;
+  font-size: 24px
+}
+html,body{
+  height: 100%;
+}
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+input {
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+}
+a {
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  color: #999999;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, span, a, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: PingFang-SC-Regular !important;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+fieldset, img, iframe {
+  border: 0
+}
+:focus {
+  outline: 0
+}
+i, address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal
+}
+ol, ul {
+  list-style: none
+}
+li {
+  list-style: none
+}
+caption, th {
+  text-align: left
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ''
+}
+abbr, acronym {
+  border: 0;
+  font-variant: normal
+}
+img {
+  vertical-align: top;
+  border: none;
+}
+input, textarea {
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  -webkit-appearance: none;
+}
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none;
+}
+input[type="text"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], input[type="email"], input[type="url"], textarea {
+  -webkit-appearance: none;
+  border: 1px solid;
+  border-radius: 0;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+em, i {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+input[type="checkbox"] {
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #F5F5F5;
+  border: 0.05rem solid #CCC;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+/*去掉或设置web端滚动条样式*/
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+    width: 0px;
+    height: 0px;
+    background-color: #F5F5F5;
+}
+/*clear float    清除浮动;*/
+.clearFix {
+    zoom: 1
+}
+.clearFix:after {
+    display: block;
+    clear: both;
+    content: '\20'
+}
+.ak-position-relative {
+    position: relative;
+}
+
+.ak-position-absolute {
+    position: absolute;
+}
+
+.ak-border-none {
+    border: none !important;
+}
+
+.ak-float-none {
+    float: none !important;
+}
+
+.ak-overflow-hidden {
+    overflow: hidden;
+}
+
+.ak-p0 {
+    padding: 0 !important;
+}
+
+.ak-plr5 {
+    padding: 0px 5px !important;
+}
+
+.ak-p5 {
+    padding: 5px;
+}
+
+.ak-color-white {
+    color: white !important;
+}
+
+.ak-color-FB8811 {
+    color: #FB8811 !important;
+}
+
+.ak-color-222 {
+    color: #222 !important;
+}
+
+.ak-color-666 {
+    color: #666 !important;
+}
+
+.ak-color-ccc {
+    color: #ccc !important;
+}
+
+.ak-color-FF4200 {
+    color: #FF4200 !important;
+}
+
+.ak-cursor-pointer {
+    cursor: pointer !important;
+}
+
+.ak-font30 {
+    font-size: 1.5rem !important;
+}
+
+.ak-font28 {
+    font-size: 1.4rem !important;
+}
+
+.ak-font26 {
+    font-size: 1.3rem !important;
+}
+
+.ak-font24 {
+    font-size: 1.2rem !important;
+}
+
+.ak-font22 {
+    font-size: 1.1rem !important;
+}
+
+.ak-font20 {
+    font-size: 1.0rem !important;
+}
+
+.ak-font18 {
+    font-size: 0.9rem !important;
+}
+
+.ak-font16 {
+    font-size: 0.8rem !important;
+}
+
+.ak-font14 {
+    font-size: 0.7rem !important;
+}
+
+.ak-font12 {
+    font-size: 0.6rem !important;
+}
+
+.ak-fontbold {
+    font-weight: bold;
+}
+
+
+/*VUE初始化没有值的时候隐藏'{{}}'*/
+
+[v-cloak] {
+    display: none;
+}
+
+.ak-BG-Btn-orange {
+    background-color: #fb9f34 !important;
+}
+
+.ak-BG-Btn-green {
+    background-color: #00c03b !important;
+}
+
+
+/* 将元素宽变为0的动画隐藏 */
+
+.ak-TransitionHidden {
+    width: 0 !important;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+
+/* 将元素宽变为100%的动画显示 */
+
+.ak-TransitionShow {
+    width: 100% !important;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+
+/*渐变的边框（黑色；横向）：*/
+
+.ak-black-bottomBorder {
+    width: 100%;
+    height: 1px;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(0, 0, 0, .5)), color-stop(.5, rgba(0, 0, 0, .5)), color-stop(1, transparent), to(transparent));
+}
+
+
+/*渐变的边框（橘黄色；纵向）：   		（需要自己设高）！！！*/
+
+.ak-orange-leftBorder {
+    width: 1px;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(255, 119, 0, .5)), color-stop(.5, rgba(255, 119, 0, .5)), color-stop(1, transparent), to(transparent));
+}
+
+
+/*渐变的边框（橘黄色；横向）：*/
+
+.ak-orange-bottomBorder {
+    width: 100%;
+    height: 0.05rem;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(255, 119, 0, .5)), color-stop(.5, rgba(255, 119, 0, .5)), color-stop(1, transparent), to(transparent));
+}
+
+
+/*渐变的边框（白色；纵向）：   		（需要自己设高）！！！*/
+
+.ak-white-leftBorder {
+    width: 0.1rem;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(255, 255, 255, .5)), color-stop(.5, rgba(255, 255, 255, .5)), color-stop(1, transparent), to(transparent));
+}
+
+
+/*渐变的边框（黑色；纵向）：   		（需要自己设高）！！！*/
+
+.ak-black-leftBorder {
+    width:  1px;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(0, 0, 0, .5)), color-stop(.5, rgba(0, 0, 0, .5)), color-stop(1, transparent), to(transparent));
+}
+
+
+/*渐变的边框（灰白色；横向）：*/
+
+.ak-smoke-bottomBorder {
+    width: 100%;
+    height: 0.05rem;
+    background-image: -webkit-gradient( linear, 0 100%, 100% 0, color-stop(0, transparent), color-stop(.5, rgba(222, 222, 222, .5)), color-stop(.5, rgba(222, 222, 222, .5)), color-stop(1, transparent), to(transparent));
+}
+
+
+/*clear float    清除浮动;*/
+
+.ak-clearFix {
+    zoom: 1
+}
+
+.ak-clearFix:after {
+    display: block;
+    clear: both;
+    content: '\20'
+}
+
+
+/*左右padding距离*/
+
+.ak-pLR {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+
+
+/*      文字超出一行省略  容器需要宽度        */
+
+.ak-txtOver {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+
+/*      文字超出两行省略   容器需要宽度     */
+
+.ak-txtDOver {
+    word-break: break-all !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    /*  显示的行数  */
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+
+/*     实体的阴影          */
+
+.ak-boxSad {
+    box-shadow: 1px 1px 6px #ccc;
+    -webkit-box-shadow: 1px 1px 6px #ccc;
+    -moz-box-shadow: 1px 1px 6px #ccc;
+    -o-box-shadow: 1px 1px 6px #ccc;
+    -ms-box-shadow: 1px 1px 6px #ccc;
+}
+
+
+/*      站位空DIV           */
+
+.ak-nullDiv {
+    width: 100%;
+    height: 2.25rem !important;
+    opacity: 0;
+    margin-top: 0.5rem;
+}
+
+
+/*      input的内向阴影      */
+
+.ak-IptSad {
+    border-radius: 0.16rem;
+    -webkit-box-shadow: 0 5px 5px -4px #d6d6d6 inset;
+    -moz-box-shadow: 0 5px 5px -4px #d6d6d6 inset;
+    -o-box-shadow: 0 5px 5px -4px #d6d6d6 inset;
+    -ms-box-shadow: 0 5px 5px -4px #d6d6d6 inset;
+    box-shadow: 0 5px 5px -4px #d6d6d6 inset;
+    background-color: rgba(238, 238, 238, 0.9);
+}
+
+
+/*      弹性盒居中            */
+
+.ak-flexC {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -moz-box-pack: space-around;
+    -webkit--moz-box-pack: space-around;
+    box-pack: space-around;
+    align-items: center;
+    -webkit-align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+
+/*      弹性盒居两边            */
+
+.ak-flexB {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -moz-box-pack: space-between;
+    -webkit--moz-box-pack: space-between;
+    box-pack: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+
+/*      元素变成弹性盒            */
+
+.ak-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+/* 				弹性盒纵向排列 			 */
+
+.ak-flex-columnC {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -moz-box-pack: space-around;
+    -webkit--moz-box-pack: space-around;
+    box-pack: space-around;
+    align-items: center;
+    -webkit-align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.ak-color-cloudCar {
+    color: #fb814c !important;
+}
+
+
+/*----------------------------------------------------------------------------------------------
+		* 列表页头部的公共样式 开始 ：
+		------------------------------------------------------------------------------------------------*/
+
+.list-base-head-style {
+    background-color: #fff;
+}
+
+.list-base-head-style .aui-searchbar {
+    background-color: #fff
+}
+
+.list-base-head-style .aui-searchbar .aui-searchbar-input {
+    background-color: #f2f2f2;
+    height: 1.9rem;
+    line-height: 1.9rem;
+}
+
+.list-base-head-style .aui-searchbar .aui-searchbar-input input {
+    height: 1.9rem;
+    width: 76%;
+}
+
+.list-base-head-backP {
+    height: 3rem;
+    padding-left: 0.4rem;
+}
+
+.list-base-head-titH3 {
+    height: 2.5rem;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    color: #4a4a4a;
+}
+
+
+/*----------------------------------------------------------------------------------------------
+		* 列表页头部的公共样式 结束 ：
+		------------------------------------------------------------------------------------------------*/
+
+.order-fun-btn-box {
+    padding: 0.75rem 2rem;
+    background-color: #fff;
+}
+
+.order-fun-btn-box .aui-btn-info {
+    background-color: #fb9f34 !important;
+}
+
+.order-fun-btn-box .aui-btn-info:active {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.order-fun-btn {
+    height: 2rem;
+    margin-top: 1rem;
+    line-height: 2rem;
+}
+
+
+/*  控制switch选中时的颜色  */
+
+#cloudCarApp .aui-switch:checked {
+    border-color: #fb9f34;
+    background-color: #fb9f34;
+}
+
+
+/*           加载跟多部分样式           */
+
+.load-more-MsgBox {
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.load-more-MsgBox img {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.will-load-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+/*           加载跟多部分样式end           */
+
+
+/*                 点击时 凹陷 的动画效果                    */
+
+@keyframes ak-sinkFun {
+    0% {
+        -moz-box-shadow: 1px 1px 50px #fff inset;
+        -webkit-box-shadow: 1px 1px 50px #fff inset;
+        box-shadow: 1px 1px 50px #fff inset;
+        background-color: #e0e0e0
+    }
+    20% {
+        -moz-box-shadow: 1px 1px 70px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 70px #e0e0e0 inset;
+        box-shadow: 1px 1px 70px #e0e0e0 inset;
+        background-color: #e0e0e0
+    }
+    50% {
+        -moz-box-shadow: 1px 1px 50px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 50px #e0e0e0 inset;
+        box-shadow: 1px 1px 50px #e0e0e0 inset;
+        background-color: #f5f5f5
+    }
+    100% {
+        -moz-box-shadow: 1px 1px 6px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 6px #e0e0e0 inset;
+        box-shadow: 1px 1px 6px #e0e0e0 inset;
+        background-color: #fafafa
+    }
+}
+
+@-moz-keyframes ak-sinkBtn
+/* Firefox */
+
+{
+    0% {
+        -moz-box-shadow: 1px 1px 50px #fff inset;
+        -webkit-box-shadow: 1px 1px 50px #fff inset;
+        box-shadow: 1px 1px 50px #fff inset;
+        background-color: #e0e0e0
+    }
+    20% {
+        -moz-box-shadow: 1px 1px 70px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 70px #e0e0e0 inset;
+        box-shadow: 1px 1px 70px #e0e0e0 inset;
+        background-color: #e0e0e0
+    }
+    50% {
+        -moz-box-shadow: 1px 1px 50px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 50px #e0e0e0 inset;
+        box-shadow: 1px 1px 50px #e0e0e0 inset;
+        background-color: #f5f5f5
+    }
+    100% {
+        -moz-box-shadow: 1px 1px 6px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 6px #e0e0e0 inset;
+        box-shadow: 1px 1px 6px #e0e0e0 inset;
+        background-color: #fafafa
+    }
+}
+
+@-webkit-keyframes ak-sinkBtn
+/* Safari and Chrome */
+
+{
+    0% {
+        -moz-box-shadow: 1px 1px 50px #fff inset;
+        -webkit-box-shadow: 1px 1px 50px #fff inset;
+        box-shadow: 1px 1px 50px #fff inset;
+        background-color: #e0e0e0
+    }
+    20% {
+        -moz-box-shadow: 1px 1px 70px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 70px #e0e0e0 inset;
+        box-shadow: 1px 1px 70px #e0e0e0 inset;
+        background-color: #e0e0e0
+    }
+    50% {
+        -moz-box-shadow: 1px 1px 50px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 50px #e0e0e0 inset;
+        box-shadow: 1px 1px 50px #e0e0e0 inset;
+        background-color: #f5f5f5
+    }
+    100% {
+        -moz-box-shadow: 1px 1px 6px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 6px #e0e0e0 inset;
+        box-shadow: 1px 1px 6px #e0e0e0 inset;
+        background-color: #fafafa
+    }
+}
+
+@-o-keyframes ak-sinkBtn
+/* Opera */
+
+{
+    0% {
+        -moz-box-shadow: 1px 1px 50px #fff inset;
+        -webkit-box-shadow: 1px 1px 50px #fff inset;
+        box-shadow: 1px 1px 50px #fff inset;
+        background-color: #e0e0e0
+    }
+    20% {
+        -moz-box-shadow: 1px 1px 70px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 70px #e0e0e0 inset;
+        box-shadow: 1px 1px 70px #e0e0e0 inset;
+        background-color: #e0e0e0
+    }
+    50% {
+        -moz-box-shadow: 1px 1px 50px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 50px #e0e0e0 inset;
+        box-shadow: 1px 1px 50px #e0e0e0 inset;
+        background-color: #f5f5f5
+    }
+    100% {
+        -moz-box-shadow: 1px 1px 6px #e0e0e0 inset;
+        -webkit-box-shadow: 1px 1px 6px #e0e0e0 inset;
+        box-shadow: 1px 1px 6px #e0e0e0 inset;
+        background-color: #fafafa
+    }
+}
+
+.ak-sinkBtn:active {
+    animation: ak-sinkFun 0.15s;
+    -moz-animation: ak-sinkFun 0.15s;
+    /* Firefox */
+    -webkit-animation: ak-sinkFun 0.15s;
+    /* Safari and Chrome */
+    -o-animation: ak-sinkFun 0.15s;
+    /* Opera */
+}
+
+
+/*                 点击时 凸出 的动画效果                    */
+
+@keyframes ak-brightFun {
+    0% {
+        -moz-box-shadow: 1px 1px 50px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 50px #fbe9e7;
+        box-shadow: 1px 1px 50px #fbe9e7;
+    }
+    20% {
+        -moz-box-shadow: 1px 1px 70px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 70px #fbe9e7;
+        box-shadow: 1px 1px 70px #fbe9e7;
+    }
+    50% {
+        -moz-box-shadow: 1px 1px 50px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 50px #fbe9e7;
+        box-shadow: 1px 1px 50px #fbe9e7;
+    }
+    100% {
+        -moz-box-shadow: 1px 1px 6px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 6px #fbe9e7;
+        box-shadow: 1px 1px 6px #fbe9e7;
+    }
+}
+
+@-moz-keyframes ak-brightFun
+/* Firefox */
+
+{
+    0% {
+        -moz-box-shadow: 1px 1px 50px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 50px #fbe9e7;
+        box-shadow: 1px 1px 50px #fbe9e7;
+    }
+    20% {
+        -moz-box-shadow: 1px 1px 70px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 70px #fbe9e7;
+        box-shadow: 1px 1px 70px #fbe9e7;
+    }
+    50% {
+        -moz-box-shadow: 1px 1px 50px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 50px #fbe9e7;
+        box-shadow: 1px 1px 50px #fbe9e7;
+    }
+    100% {
+        -moz-box-shadow: 1px 1px 6px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 6px #fbe9e7;
+        box-shadow: 1px 1px 6px #fbe9e7;
+    }
+}
+
+@-webkit-keyframes ak-brightFun
+/* Safari and Chrome */
+
+{
+    0% {
+        -moz-box-shadow: 1px 1px 50px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 50px #fbe9e7;
+        box-shadow: 1px 1px 50px #fbe9e7;
+    }
+    20% {
+        -moz-box-shadow: 1px 1px 70px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 70px #fbe9e7;
+        box-shadow: 1px 1px 70px #fbe9e7;
+    }
+    50% {
+        -moz-box-shadow: 1px 1px 50px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 50px #fbe9e7;
+        box-shadow: 1px 1px 50px #fbe9e7;
+    }
+    100% {
+        -moz-box-shadow: 1px 1px 6px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 6px #fbe9e7;
+        box-shadow: 1px 1px 6px #fbe9e7;
+    }
+}
+
+@-o-keyframes ak-brightFun
+/* Opera */
+
+{
+    0% {
+        -moz-box-shadow: 1px 1px 50px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 50px #fbe9e7;
+        box-shadow: 1px 1px 50px #fbe9e7;
+    }
+    20% {
+        -moz-box-shadow: 1px 1px 70px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 70px #fbe9e7;
+        box-shadow: 1px 1px 70px #fbe9e7;
+    }
+    50% {
+        -moz-box-shadow: 1px 1px 50px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 50px #fbe9e7;
+        box-shadow: 1px 1px 50px #fbe9e7;
+    }
+    100% {
+        -moz-box-shadow: 1px 1px 6px #fbe9e7;
+        -webkit-box-shadow: 1px 1px 6px #fbe9e7;
+        box-shadow: 1px 1px 6px #fbe9e7;
+    }
+}
+
+.ak-brightBtn:active {
+    animation: ak-brightFun 0.2s;
+    -moz-animation: ak-brightFun 0.2s;
+    /* Firefox */
+    -webkit-animation: ak-brightFun 0.2s;
+    /* Safari and Chrome */
+    -o-animation: ak-brightFun 0.2s;
+    /* Opera */
+}

@@ -1,0 +1,160 @@
+
+/*    首页-活动-活动列表    */
+
+.mu-card-text {
+  padding: 0.75rem;
+}
+
+.active-detail-box h4 {
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.active-detail-box p {
+  color: #777;
+}
+
+
+
+
+
+/*    首页-活动-活动列表-标签模块    */
+
+.active-chip {
+  height: 1.5rem;
+  padding: 0 0.45rem;
+  border-radius: 3px;
+  border: solid 1px #b3b3b3;
+  font-size: 12px;
+  margin-right: 0.5rem;
+  color: #777777;
+}
+
+.active-chip-price {
+  height: 1.8rem;
+  font-size: 16px;
+  color: #fff !important;
+  margin-top: -1rem;
+}
+/*      返回按钮      */
+
+.backBtn {
+  position: fixed;
+  bottom: 10%;
+  left: 0.8rem;
+  border-radius: 50%;
+  width: 2.3rem;
+  height: 2.3rem;
+  line-height: 2.3rem;
+  text-align: center;
+  /*background-color:rgba(0, 150, 136, 0.7);*/
+  background-color:rgba(255, 64, 129, 0.7);
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+/*       虚化背景模块      */
+
+.user-overview {
+  height: 9rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.user-overview-bg {
+  height: 100%;
+  width: 100%;
+  /*background-image: url(./../../../static/image/timg.jpeg);*/
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  -moz-filter: blur(2px);
+  -webkit-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+  overflow: hidden;
+}
+/*#centerUserBg{
+    background-image: url(../image/beanSproutBg5.jpg) !important;
+}*/
+
+.user-deta {
+  width: 40%;
+  position: absolute;
+  left: 30%;
+  top: 1.5rem;
+}
+
+.user-deta h3 {
+  margin-top: 0.75rem;
+  color: #fff;
+}
+
+.user-imgBox {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-size: cover;
+}
+/*                 没有数据的提示盒子的样式               */
+
+.no-detail-box{
+    width: 40%;
+    margin: 1rem auto;
+    font-size: 16px;
+    text-align: center;
+    color: #777;
+}
+.no-detail-imgBox{
+    width: 100%;
+    background-image: url(../image/beanSproutGeiHua.gif);
+    background-size: cover;
+    height: 10rem;
+}
+.bottom-load-more-Box{
+    text-align:center;
+    height:4rem;
+    line-height:4rem;
+}
+
+/*                 修改主题色                */
+
+.mu-tabs{
+    background-color: #f5f5f5 !important;
+}
+.mu-bottom-nav-shift{
+    background-color: #f5f5f5 !important;
+}
+.mu-raised-button-primary{
+    background-color: #1aac1b !important;
+}
+.mu-step-label.active .mu-step-label-circle {
+    background-color: #1aac1b !important;
+}
+.mu-text-field.focus-state{
+    color: #1aac1b !important;
+}
+.mu-text-field-focus-line{
+    background-color: #1aac1b !important;
+}
+.mu-bottom-nav-shift .mu-bottom-item-active .mu-bottom-item-icon{
+    color: #26a526 !important;
+}
+.mu-bottom-nav-shift .mu-bottom-item-active .mu-bottom-item-text{
+    color: #26a526 !important;
+}
+.mu-tab-active{
+    color: #1aac1b !important
+}
+.mu-tab-link{
+    color: #aaa !important
+}
+.mu-bottom-nav-shift .mu-buttom-item{
+    color: #1aac1b !important
+}
+.mu-tab-link-highlight{
+    background-color: #26a526 !important;
+}
